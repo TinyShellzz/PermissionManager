@@ -1,9 +1,10 @@
 ## 1.usage command
-add permission  
+remove permission  
 ```
 /perm remove <playerName> <permissionNode>
 /perm remove name minecraft.command.list
 ```
+add permission  
 ```
 /perm add <playerName> <permissionNode>  
 /perm add name minecraft.command.list
