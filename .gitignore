@@ -1,5 +1,7 @@
 # User-specific stuff
 .idea/
+gradle/
+!gradle-wrapper.properties
 
 *.jar
 *.iml
