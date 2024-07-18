@@ -1,16 +1,16 @@
-## 1.usage
-load item at "item/tcc_server.yml"
+## 1.usage command
+add permission  
 ```
-ItemStackManager.load("tcc_server");
+/perm remove <playerName> <permissionNode>
+/perm remove name minecraft.command.list
 ```
-load all item in folder "item"  
 ```
-ItemStackManager.reload()
-```
-get item by name  
-```
-ItemStackManager.getItem("tcc_server")
+/perm add <playerName> <permissionNode>  
+/perm add name minecraft.command.list
 ```
 
-## 2.example of item.yml
-example file "resources/item/tcc_server.yml"
+## 2.usage config file, edit groups.yml and uses.yml
+reload config
+```
+/perm reload
+```

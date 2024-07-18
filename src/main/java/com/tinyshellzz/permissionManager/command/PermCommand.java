@@ -1,6 +1,7 @@
 package com.tinyshellzz.permissionManager.command;
 
 import com.tinyshellzz.permissionManager.ObjectPool;
+import com.tinyshellzz.permissionManager.config.PluginConfig;
 import com.tinyshellzz.permissionManager.core.PermissionService;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;
@@ -38,6 +39,9 @@ public class PermCommand  implements TabExecutor {
                     return true;
                 }
                 return PermissionService.remove(args[1], args[2]);
+            case "reload":
+                PluginConfig.reload();
+                return true;
         }
 
         return true;
@@ -47,7 +51,7 @@ public class PermCommand  implements TabExecutor {
     public @Nullable List<String> onTabComplete(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if (args.length == 1) {
             // 如果只有一个参数，返回所有子命令的列表
-            return Arrays.asList("give", "remove");
+            return Arrays.asList("give", "remove", "reload");
         }  else {
             String subcommand = args[0].toLowerCase();
             switch (subcommand) {
