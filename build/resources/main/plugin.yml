@@ -1,5 +1,5 @@
 name: PermissionManager
-version: '1.0.0-20240718'
+version: '1.0.1-20240718'
 description: demo Project
 main: com.tinyshellzz.permissionManager.PermissionManager
 api-version: '1.20.6'
