@@ -1,0 +1,7 @@
+tinyshellzz:
+  group:
+    - op
+  no_permission:
+    - minecraft.command.tp
+  permission:
+    - minecraft.command.give
