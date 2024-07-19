@@ -42,6 +42,7 @@ public class PermissionService {
             }
         }
 
+//        player.recalculatePermissions();
         player.updateCommands();    // 让 tab complete 生效
     }
 
@@ -104,7 +105,7 @@ public class PermissionService {
     public static boolean give(String playerName, String permission) {
         playerName = playerName.toLowerCase();
         PermissionUser permissionUser = PermissionUsers.users.get(playerName);
-        permissionUser.addPermission(permission);
+        if(permissionUser != null) permissionUser.addPermission(permission);
 
         PermissionService.calculatePermission();
         PermissionUsers.saveConfig();
@@ -119,7 +120,7 @@ public class PermissionService {
     public static boolean remove(String playerName, String permission) {
         playerName = playerName.toLowerCase();
         PermissionUser permissionUser = PermissionUsers.users.get(playerName);
-        permissionUser.removePermission(permission);
+        if(permissionUser != null) permissionUser.removePermission(permission);
 
         PermissionService.calculatePermission();
         PermissionUsers.saveConfig();

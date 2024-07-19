@@ -38,13 +38,13 @@ public class PermCommand  implements TabExecutor {
         switch(subcommand) {
             case "give":
                 if (args.length < 3) {
-                    sender.sendMessage(ChatColor.YELLOW + "用法: perm give <player> <permission>");
+                    sender.sendMessage(ChatColor.YELLOW + "usage: perm give <player> <permission>");
                     return true;
                 }
                 return PermissionService.give(args[1], args[2]);
             case "remove":
                 if (args.length < 3) {
-                    sender.sendMessage(ChatColor.YELLOW + "用法: perm remove <remove> <permission>");
+                    sender.sendMessage(ChatColor.YELLOW + "usage: perm remove <remove> <permission>");
                     return true;
                 }
                 return PermissionService.remove(args[1], args[2]);
