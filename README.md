@@ -1,3 +1,5 @@
+# support paper and folia
+
 ## 1.usage command
 remove permission  
 ```
