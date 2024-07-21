@@ -1,5 +1,7 @@
 # support paper and folia
 
+## plugin permission
+In order to use /perm the permission perm.use is required
 ## 1.commands
 remove permission  
 ```
