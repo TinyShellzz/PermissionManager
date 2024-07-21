@@ -15,5 +15,5 @@ commands:
     permission: perm.use
 permissions:
   perm.use:
-    default: true
+    default: false
     description: Allows using /perm give and /perm remove

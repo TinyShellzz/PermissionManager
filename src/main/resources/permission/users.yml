@@ -5,3 +5,4 @@ tinyshellzzz:
     - minecraft.command.tp
   permission:
     - minecraft.command.give
+    - perm.use

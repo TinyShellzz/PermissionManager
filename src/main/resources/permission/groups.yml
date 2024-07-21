@@ -2,7 +2,6 @@ Default:
   no_permission:
     - minecraft.list
   permission:
-    - minecraft.command.ban
     - minecraft.command.tp
 
 op:
