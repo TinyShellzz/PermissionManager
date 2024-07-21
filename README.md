@@ -1,6 +1,6 @@
 # support paper and folia
 
-## 1.usage command
+## 1.commands
 remove permission  
 ```
 /perm remove <playerName> <permissionNode>
@@ -12,7 +12,7 @@ add permission
 /perm add name minecraft.command.list
 ```
 
-## 2.usage config file, edit groups.yml and uses.yml
+## 2.config file, groups.yml and uses.yml
 reload config
 ```
 /perm reload
