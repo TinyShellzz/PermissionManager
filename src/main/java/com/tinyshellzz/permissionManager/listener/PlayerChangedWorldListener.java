@@ -6,13 +6,16 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerChangedWorldEvent;
-import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.permissions.PermissionAttachment;
+
+import static com.tinyshellzz.permissionManager.ObjectPool.plugin;
 
 public class PlayerChangedWorldListener  implements Listener {
     @EventHandler
     public void handle(PlayerChangedWorldEvent event) {
         Player player = event.getPlayer();
-        ObjectPool.players.put(player.getDisplayName().toLowerCase(), player);
+        PermissionAttachment attachment = player.addAttachment(plugin);
+        ObjectPool.attachments.put(player.getUniqueId(), attachment);
         PermissionService.updatePermission(player);
     }
 }

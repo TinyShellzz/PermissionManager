@@ -13,7 +13,7 @@ public class PluginConfig {
 
     private static ConfigWrapper configWrapper = new ConfigWrapper(plugin, "config.yml");
     public static void reload() {
-        configWrapper.reloadConfig(); // 重新加载配置文件
+        configWrapper.reloadConfig();
 
         YamlConfiguration config = configWrapper.getConfig();
         msg =  config.getString("msg");

@@ -25,7 +25,6 @@ public class Tools {
         JsonElement _user_name = jsonObject.get("name");
         ret[1] = _user_name == null ? null : _user_name.getAsString();
 
-
         return ret;
     }
 

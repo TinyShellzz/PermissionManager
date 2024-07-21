@@ -20,7 +20,8 @@ public class PermissionGroups {
     public static ConfigWrapper configWrapper = new ConfigWrapper(plugin, "permission/groups.yml");
 
     public static void reload() {
-        configWrapper.reloadConfig(); // 重新加载配置文件
+        configWrapper.reloadConfig();
+        groups.clear();
 
         YamlConfiguration config = configWrapper.getConfig();
         Set<String> itemKeySet = config.getKeys(false);

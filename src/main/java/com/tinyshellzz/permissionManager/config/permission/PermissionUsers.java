@@ -14,10 +14,11 @@ import static com.tinyshellzz.permissionManager.ObjectPool.plugin;
 public class PermissionUsers {
     public static HashMap<String, PermissionUser> users = new HashMap<>();
 
-    public static ConfigWrapper configWrapper = new ConfigWrapper(plugin, "permission/users.yml");
+    public static ConfigWrapper configWrapper = new ConfigWrapper(plugin, "permission/users.yml");;
 
     public static void reload() {
-        configWrapper.reloadConfig(); // 重新加载配置文件
+        configWrapper.reloadConfig();
+        users.clear();
 
         YamlConfiguration config = configWrapper.getConfig();
         Set<String> itemKeySet = config.getKeys(false);
@@ -30,8 +31,6 @@ public class PermissionUsers {
                 Bukkit.getConsoleSender().sendMessage(ChatColor.RED.toString() + e.getMessage() + "\n" + e.getStackTrace());
             }
         }
-
-        saveConfig();
     }
 
     public static void saveConfig() {
