@@ -1,5 +1,5 @@
 import java.text.SimpleDateFormat
-version = "1.0.3"
+version = "1.0.4"
 
 plugins {
     `java-library`
@@ -33,9 +33,6 @@ dependencies {
     compileOnly("org.jetbrains:annotations:24.0.1")
      compileOnly("io.papermc.paper:paper-api:1.20.6-R0.1-SNAPSHOT")
     compileOnly("org.spigotmc:spigot-api:1.20.4-R0.1-SNAPSHOT")
-    compileOnly("com.comphenix.protocol:ProtocolLib:5.1.0")
-    compileOnly("net.kyori:adventure-api:4.14.0")
-    compileOnly("me.clip:placeholderapi:2.11.1")
 }
 
 group = "com.tinyshellzz.permissionManager"
